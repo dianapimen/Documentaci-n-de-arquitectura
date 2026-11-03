@@ -46,3 +46,9 @@ La correcta implementación y cumplimiento de esta decisión se comprobará medi
 - Pruebas de idempotencia que envíen múltiples veces el mismo evento de notificación hacia el componente procesador, validando que el proveedor externo reciba únicamente una petición válida por constancia.
 
 ## More Information
+### Revisión 1. Cambio en el proveedor de notificaciones
+
+* **Cambio recibido:** El proveedor externo modifica su interfaz de comunicación y cambia la forma en que reporta los errores de envío.
+* **Impacto sobre la alternativa seleccionada:** El cambio se localiza exclusivamente en el adaptador o capa de integración del componente independiente. La lógica central de eventos persistidos y almacenamiento de constancias permanece intacta.
+* **Mantenimiento de la decisión:** La decisión se mantiene vigente gracias al desacoplamiento provisto por la Alternativa B.
+* **Consecuencia o comprobación actualizada:** Se deben actualizar las pruebas unitarias y de integración del adaptador del proveedor para reflejar el nuevo contrato de API.
